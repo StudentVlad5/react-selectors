@@ -11,10 +11,10 @@ import data from '../CONST/MOCK_DATA.json';
 
 export const Sidebar = () => {
   const [listCar_product, setListCar_product] = useState([]);
-  const [listCar_model, setListCar_model] = useState([]);
-  const [listCar_year, setListCar_year] = useState([]);
-  const [listCar_vin, setListCar_vin] = useState([]);
-  const [listCar_address, setListCar_address] = useState([]);
+  const [, setListCar_model] = useState([]);
+  const [, setListCar_year] = useState([]);
+  const [, setListCar_vin] = useState([]);
+  const [, setListCar_address] = useState([]);
 
   const [listCar_model_product, setListCar_model_product] = useState([]);
   const [listCar_year_model_product, setListCar_year_model_product] = useState(
