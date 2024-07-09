@@ -48,14 +48,10 @@ export const Sidebar = () => {
 
       if (listOfYear.hasOwnProperty(it.car_year)) {
         listOfYear[it.car_year].push(it.id);
-        listCarOfYear_Model_product[it.car_year].push(
-          it.car_product + it.car_model
-        );
+        listCarOfYear_Model_product[it.car_year].push(it.car_model);
       } else {
         listOfYear[it.car_year] = [it.id];
-        listCarOfYear_Model_product[it.car_year] = [
-          it.car_product + it.car_model,
-        ];
+        listCarOfYear_Model_product[it.car_year] = [it.car_model];
       }
 
       if (listOfVin.hasOwnProperty(it.car_vin)) {
@@ -159,12 +155,10 @@ export const Sidebar = () => {
                             style={{ width: '15px', height: '15px' }}
                           />
                           {i}
-                          {Object.keys(listCar_year_model_product).map(
-                            (y, ind) =>
-                              listCar_year_model_product[y].includes(
-                                it + i
-                              ) && (
-                                <ModelListItem className="yearContainer">
+                          <ModelListItem className="yearContainer">
+                            {Object.keys(listCar_year_model_product).map(
+                              (y, ind) =>
+                                listCar_year_model_product[y].includes(i) && (
                                   <SidebarListItem
                                     className="car_year"
                                     key={ind}
@@ -176,9 +170,9 @@ export const Sidebar = () => {
                                     />
                                     {y}
                                   </SidebarListItem>
-                                </ModelListItem>
-                              )
-                          )}
+                                )
+                            )}
+                          </ModelListItem>
                         </SidebarListItem>
                       )
                   )}
