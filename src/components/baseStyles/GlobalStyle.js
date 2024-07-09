@@ -53,8 +53,5 @@ img {
 
 #root {
   width: 100%;
-  @media screen and (min-width: 768px) {
-    width: auto;
-  }
 }
 `;
