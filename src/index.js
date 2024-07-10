@@ -6,7 +6,7 @@ import { GlobalStyle } from "components/baseStyles/GlobalStyle";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/react-selectors">
+    <BrowserRouter basename="/">
           <GlobalStyle />
           <App />
     </BrowserRouter>
